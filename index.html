@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+        width: 500px;
+        margin: 100px auto;
+        text-align: center;
+        box-shadow: 0 0 10px black;
+        padding: 30px;
+        }
+        body{
+            background-color: brown;
+        }
+    </style>
+
+    <script>
+        function create(){
+           var inputm = document.getElementById("i1").value;
+           if(inputm === ""){
+               alert("plz enter some text")
+               return;
+           }
+           else{}
+           
+           
+           var ref=document.createElement("span");
+           ref.style.color = 'blue';
+           ref.style.marginRight = '10px';
+           ref.style.marginTop = '20px';
+           ref.append(inputm);
+
+           var butt=document.createElement("button");
+           butt.innerText="Edit";
+           butt.style.marginRight = '10px';
+           butt.style.marginTop = '20px';
+
+           var butt1=document.createElement("button");
+           butt1.innerText="Delete";
+           butt1.style.marginRight = '10px';
+           butt1.style.marginTop = '20px';
+
+           var butt2=document.createElement("button");
+           butt2.innerText="Update";
+           butt2.style.marginRight = '10px';
+           butt2.style.marginTop = '20px';
+
+           var br1=document.createElement("br");
+
+           document.querySelector('div').appendChild(ref);
+           document.querySelector('div').appendChild(butt);
+           document.querySelector('div').appendChild(butt1);
+           
+           document.querySelector('div').appendChild(butt2);
+           document.querySelector('div').appendChild(br1);
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Enter Text:<input type="text" id="i1"/>
+        <button onclick="create()">Create new Element</button></br>
+       
+
+    </div>
+</body>
+</html>
